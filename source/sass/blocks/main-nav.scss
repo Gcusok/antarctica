@@ -1,0 +1,8 @@
+.main-nav {
+    z-index: 2;
+    &__list {
+        @include vp-767 {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,53 @@
+.header {
+    position: relative;
+    z-index: 2;
+
+    &__wrapper {
+        display: flex;
+        align-items: flex-start;
+        padding: 35px 0;
+    }
+
+    &__logo {
+        margin-right: auto;
+    }
+
+    &__button {
+        display: none;
+
+        @include vp-767 {
+            width: 24px;
+            height: 12px;
+
+            padding: 5px;
+
+            display: block;
+            position: relative;
+
+            background-color: transparent;
+            border: none;
+            border-bottom: 2px solid $color-alice-blue;
+
+            &::before,
+            &::after {
+                position: absolute;
+                content: "";
+
+                width: 24px;
+                height: 2px;
+
+                background-color: $color-alice-blue;
+            }
+
+            &::before {
+                top: 0;
+                left: 0;
+            }
+
+            &::after {
+                top: 5px;
+                left: 0;
+            }
+        }
+    }
+}
