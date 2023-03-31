@@ -1406,10 +1406,6 @@ button,
   scale: 0.9;
 }
 
-.main__section-wrapper {
-  overflow: hidden;
-}
-
 .hero {
   position: relative;
   background-color: #00316b;
@@ -1487,6 +1483,90 @@ button,
   -ms-flex-item-align: center;
   -ms-grid-row-align: center;
   align-self: center;
+}
+
+.advantages {
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  background-color: #dbe7f5;
+  padding: 120px 0;
+}
+
+.advantages__background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+
+.advantages__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.advantages__title {
+  margin: 0;
+  margin-bottom: 60px;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 42px;
+}
+
+.advantages__list {
+  margin: 0;
+  padding: 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  list-style: none;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.advantages__item {
+  padding: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background-color: #f9fbfd;
+}
+
+.advantages__icon {
+  margin-bottom: 25px;
+}
+
+.advantages__subtitle {
+  margin: 0;
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.advantages__text {
+  margin: 0;
+  max-width: 280px;
+}
+
+.advantages__text br {
+  display: none;
 }
 
 .footer {
@@ -1678,6 +1758,48 @@ button,
     min-width: 324px;
   }
 
+  .advantages {
+    padding: 100px 0;
+  }
+
+  .advantages__title {
+    font-size: 26px;
+    line-height: 39px;
+  }
+
+  .advantages__list {
+    gap: 30px;
+  }
+
+  .advantages__item {
+    padding: 26px 16px 25px 20px;
+  }
+
+  .advantages__icon {
+    margin-bottom: 24px;
+    height: 26px;
+  }
+
+  .advantages__icon--ship {
+    width: 21;
+  }
+
+  .advantages__icon--check {
+    width: 27px;
+  }
+
+  .advantages__icon--ship-left {
+    width: 36px;
+  }
+
+  .advantages__subtitle {
+    line-height: 25px;
+  }
+
+  .advantages__text {
+    min-width: 169px;
+  }
+
   .footer__logo {
     margin-right: 25px;
   }
@@ -1812,6 +1934,37 @@ button,
 
   .travel__image {
     min-width: 290px;
+  }
+
+  .advantages {
+    padding: 65px 0;
+  }
+
+  .advantages__title {
+    margin-bottom: 40px;
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .advantages__list {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  .advantages__item {
+    padding: 25px 15px 25px 20px;
+  }
+
+  .advantages__icon {
+    margin-bottom: 25px;
+  }
+
+  .advantages__text br {
+    display: block;
+  }
+
+  .advantages__text {
+    min-width: 223px;
   }
 
   .footer__wrapper {

@@ -1,0 +1,159 @@
+.advantages {
+    position: relative;
+    z-index: 2;
+
+    overflow: hidden;
+
+    background-color: $color-solitude;
+
+    padding: 120px 0;
+
+    @include vp-1023 {
+        padding:  100px 0;
+    }
+
+    @include vp-767 {
+        padding:  65px 0;
+    }
+
+    &__background {
+        width: 100%;
+        height: 100%;
+
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__title {
+        margin: 0;
+        margin-bottom: 60px;
+
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 42px;
+
+        @include vp-1023 {
+            font-size: 26px;
+            line-height: 39px;
+        }
+
+        @include vp-767 {
+            margin-bottom:  40px;
+
+            font-size: 24px;
+            line-height: 36px;
+        }
+    }
+
+    &__list {
+        margin: 0;
+        padding: 0;
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+
+        list-style: none;
+        font-size: 14px;
+        line-height: 20px;
+
+        @include vp-1023 {
+            gap: 30px;
+        }
+
+        @include vp-767 {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__item {
+        padding: 30px;
+
+        display: flex;
+        flex-direction: column;
+
+        background-color: $color-alice-blue;
+
+        @include vp-1023 {
+            padding:  26px 16px 25px 20px;
+        }
+
+        @include vp-767 {
+            padding: 25px 15px 25px 20px;
+        }
+    }
+
+    &__icon {
+        margin-bottom: 25px;
+
+        @include vp-1023 {
+            margin-bottom: 24px;
+
+            height: 26px;
+        }
+
+        @include vp-767 {
+            margin-bottom: 25px;
+        }
+
+        &--ship {
+            @include vp-1023 {
+                width: 21;
+            }
+        }
+
+        &--check {
+            @include vp-1023 {
+                width: 27px;
+            }
+        }
+
+        &--ship-left {
+            @include vp-1023 {
+                width: 36px;
+            }
+        }
+    }
+
+    &__subtitle {
+        margin: 0;
+        margin-bottom: 20px;
+
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 27px;
+
+        @include vp-1023 {
+            line-height: 25px;
+        }
+    }
+
+    &__text {
+        margin: 0;
+        max-width: 280px;
+
+        br {
+            display: none;
+
+            @include vp-767 {
+                display: block;
+            }
+        }
+
+        @include vp-1023 {
+            min-width: 169px;
+        }
+
+        @include vp-767 {
+            min-width: 223px;
+        }
+    }
+}
