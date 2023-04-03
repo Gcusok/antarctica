@@ -1,6 +1,18 @@
-import {iosVhFix} from './utils/ios-vh-fix';
-import {initModals} from './modules/modals/init-modals';
-import {Form} from './modules/form-validate/form';
+import {
+  iosVhFix
+} from './utils/ios-vh-fix';
+import {
+  initModals
+} from './modules/modals/init-modals';
+import {
+  Form
+} from './modules/form-validate/form';
+import {
+  initSlowScroll
+} from './modules/slow-scroll/slow-scroll';
+import {
+  initCheckJs
+} from './modules/check-js/check-js';
 
 // ---------------------------------
 
@@ -21,7 +33,8 @@ window.addEventListener('DOMContentLoaded', () => {
     const form = new Form();
     window.form = form;
     form.init();
-
+    initSlowScroll();
+    initCheckJs();
   });
 });
 

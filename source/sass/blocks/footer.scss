@@ -7,7 +7,7 @@
         display: flex;
         align-items: center;
 
-        padding: 63px 0;
+        padding: 50px 0;
 
         @include vp-767 {
             flex-direction: column;
@@ -57,7 +57,6 @@
         margin: 0;
         margin-left: auto;
         padding: 0;
-        min-width: 106px;
 
         list-style: none;
 

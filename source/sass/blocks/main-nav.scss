@@ -1,8 +1,25 @@
 .main-nav {
+    padding-top: 10px;
     z-index: 2;
+
     &__list {
         @include vp-767 {
             display: none;
+        }
+    }
+
+    &--no-js {
+        @include vp-767 {
+            width: 100vw;
+        }
+    }
+
+    &__list {
+        &--no-js {
+            @include vp-767 {
+                display: flex;
+                justify-content: center;
+            }
         }
     }
 }

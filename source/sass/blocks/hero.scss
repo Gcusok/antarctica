@@ -1,18 +1,20 @@
 .hero {
     position: relative;
     background-color: $color-prussian-blue;
-    padding: 210px 0 283px 95px;
+    
+    &__wrapper {
+        padding: 160px 0 278px 95px;
 
-    @include vp-1023 {
-        padding: 0;
-        padding-top: 235px;
-        padding-bottom: 280px;
+        @include vp-1023 {
+            padding: 0;
+            padding-top: 235px;
+            padding-bottom: 280px;
+        }
+    
+        @include vp-767 {
+            padding: 143px 25px 185px 0;
+        }
     }
-
-    @include vp-767 {
-        padding: 143px 25px 185px 0;
-    }
-
 
     &__background {
         width: 100%;
@@ -26,6 +28,12 @@
         @include vp-1023 {
             min-height: 727px;
         }
+
+        @include vp-767 {
+            &--no-js {
+                top: -211px;
+            }
+        }
     }
 
     &__content {
@@ -35,16 +43,18 @@
         font-size: 20px;
         line-height: 24px;
         color: $color-alice-blue;
-        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        text-shadow: 0px 4px 4px $color-text-shadow;
     }
 
     &__title {
         margin: 0;
-        margin-bottom: 30px;
+        margin-bottom: 12px;
 
         font-weight: 700;
         font-size: 54px;
         line-height: 66px;
+
+        text-shadow: 0px 4px 4px $color-text-shadow;
 
         @include vp-1023 {
             font-size: 50px;

@@ -1,0 +1,60 @@
+.checkbox {
+    margin-bottom: 34px;
+    padding-left: 23px;
+
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+    font-size: 10px;
+    line-height: 13px;
+
+    .input-message {
+        position: absolute;
+        top: 10px;
+    }
+
+    &__control-mark {
+        width: 18px;
+        height: 18px;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        background-color: $color-alice-blue;
+    }
+
+    &__control-mark::before,
+    &__control-mark::after {
+        width: 1px;
+
+        position: absolute;
+
+        background-color: $color-sapphire;
+    }
+
+    &__control-mark::before {
+        top: 5px;
+        left: 5px;
+        height: 7px;
+        transform: rotate(-38deg);
+    }
+
+    &__control-mark::after {
+        top: 4px;
+        left: 10px;
+        height: 9px;
+        transform: rotate(45deg);
+    }
+
+    input:checked+&__control-mark::before,
+    input:checked+&__control-mark::after {
+        content: "";
+    }
+
+    label:hover,
+    label:focus-within {
+        opacity: 0.7;
+    }
+}
