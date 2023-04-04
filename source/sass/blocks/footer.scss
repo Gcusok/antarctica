@@ -9,11 +9,16 @@
 
         padding: 50px 0;
 
+        @include vp-1023 {
+            padding: 39px 0;
+        }
+
         @include vp-767 {
             flex-direction: column;
             align-items: flex-start;
 
-            padding: 40px 0;
+            padding-top: 40px;
+            padding-bottom: 32px;
         }
     }
 
@@ -25,7 +30,7 @@
         }
 
         @include vp-767 {
-            margin-bottom: 30px;
+            margin-bottom: 19px;
         }
     }
 
@@ -43,14 +48,20 @@
         color: $color-alice-blue;
 
         @include vp-767 {
-            margin-bottom: 30px;
+            margin-bottom: 12px;
         }
     }
 
     &__link {
+        display: block;
         color: inherit;
 
         cursor: pointer;
+
+        @include vp-1023 {
+            width: 16px;
+            height: 16px;
+        }
     }
 
     &__social-list {
@@ -63,6 +74,10 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 27px;
+
+        @include vp-1023 {
+            gap: 13px;
+        }
 
         @include vp-767 {
             margin: 0;
@@ -85,6 +100,26 @@
 
         &:active {
             scale: 0.9;
+        }
+    }
+
+    &__social-icon {
+        &--ok {
+            @include vp-1023 {
+                width: 9px;
+            }
+        }
+
+        &--votix {
+            @include vp-1023 {
+                width: 16px;
+            }
+        }
+
+        &--reddi {
+            @include vp-1023 {
+                width: 16px;
+            }
         }
     }
 }

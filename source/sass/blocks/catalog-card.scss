@@ -17,6 +17,10 @@
         padding: 35px;
     }
 
+    @include vp-767 {
+        padding: 30px 24px 36px 24px;
+    }
+
     &:hover,
     &:focus-within {
 
@@ -30,11 +34,12 @@
         }
 
         .catalog-card__title {
+            left: 0;
             bottom: 0;
         }
     }
 
-    &__image {
+    img {
         width: 100%;
         height: 100%;
 
@@ -58,6 +63,16 @@
         font-weight: 500;
         font-size: 18px;
         line-height: 27px;
+
+        @include vp-1023 {
+            bottom: -94%;
+            left: 0;
+        }
+
+        @include vp-767 {
+            bottom: -97%;
+            left: 0;
+        }
     }
 
     &__list {
@@ -101,6 +116,7 @@
         cursor: pointer;
 
         &--pp {
+            padding-top: 9px;
             min-height: 40px;
         }
 

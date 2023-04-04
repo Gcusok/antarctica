@@ -9,10 +9,17 @@
         align-items: flex-start;
         flex-wrap: wrap;
         padding: 35px 0;
+
+        @include vp-1023 {
+            padding-top: 30px;
+        }
+
+        @include vp-767 {
+            padding-top: 20px;
+        }
     }
 
     &__logo {
-        margin-right: auto;
 
         &--no-js {
             @include vp-767 {
@@ -26,7 +33,7 @@
 
         @include vp-767 {
             width: 24px;
-            height: 12px;
+            height: 18px;
 
             padding: 5px;
 
@@ -49,12 +56,12 @@
             }
 
             &::before {
-                top: 0;
+                top: 4px;
                 left: 0;
             }
 
             &::after {
-                top: 5px;
+                top: 10px;
                 left: 0;
             }
         }

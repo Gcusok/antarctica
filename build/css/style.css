@@ -747,7 +747,7 @@ button,
 .modal__close-btn {
   position: absolute;
   top: 22px;
-  right: 22px;
+  right: 12px;
   z-index: 1;
   width: 20px;
   height: 20px;
@@ -1318,10 +1318,6 @@ button,
   padding: 35px 0;
 }
 
-.header__logo {
-  margin-right: auto;
-}
-
 .header__button {
   display: none;
 }
@@ -1348,7 +1344,12 @@ button,
   scale: 0.9;
 }
 
+.logo--modal img {
+  color: #011c40;
+}
+
 .main-nav {
+  margin-left: auto;
   padding-top: 10px;
   z-index: 2;
 }
@@ -1413,6 +1414,11 @@ button,
   padding: 9px 0;
 }
 
+.navigation__link--modal {
+  font-size: 18px;
+  line-height: 22px;
+}
+
 .hero {
   position: relative;
   background-color: #00316b;
@@ -1422,11 +1428,11 @@ button,
   padding: 160px 0 278px 95px;
 }
 
-.hero__background {
+.hero img {
   width: 100%;
   min-height: 730px;
   position: absolute;
-  top: -108px;
+  bottom: -9px;
   left: 0;
   z-index: 1;
 }
@@ -1505,7 +1511,7 @@ button,
   padding-top: 110px;
 }
 
-.advantages__background {
+.advantages img {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -1659,10 +1665,11 @@ button,
 
 .catalog-card:hover .catalog-card__title,
 .catalog-card:focus-within .catalog-card__title {
+  left: 0;
   bottom: 0;
 }
 
-.catalog-card__image {
+.catalog-card img {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -1722,6 +1729,7 @@ button,
 }
 
 .catalog-card__button--pp {
+  padding-top: 9px;
   min-height: 40px;
 }
 
@@ -1755,7 +1763,7 @@ button,
   align-items: center;
 }
 
-.booking__background {
+.booking img {
   position: absolute;
   z-index: 1;
   left: 0;
@@ -2005,9 +2013,11 @@ input:checked + .checkbox__control-mark::after {
   align-items: center;
 }
 
-.contacts__map-wrapper {
-  min-width: 560px;
-  min-height: 306px;
+.contacts iframe {
+  border: 0;
+  margin-right: 100px;
+  width: 560px;
+  height: 306px;
 }
 
 .contacts__content-wrapper {
@@ -2099,6 +2109,7 @@ input:checked + .checkbox__control-mark::after {
 }
 
 .footer__link {
+  display: block;
   color: inherit;
   cursor: pointer;
 }
@@ -2189,9 +2200,17 @@ input:checked + .checkbox__control-mark::after {
     padding: 0 45px;
   }
 
-  .logo__icon {
+  .header__wrapper {
+    padding-top: 30px;
+  }
+
+  .logo img {
     width: 38px;
     height: 20px;
+  }
+
+  .main-nav {
+    padding: 0;
   }
 
   .navigation {
@@ -2205,16 +2224,16 @@ input:checked + .checkbox__control-mark::after {
   }
 
   .navigation__item {
-    margin-right: 22px;
+    margin-right: 23px;
   }
 
   .hero__wrapper {
     padding: 0;
-    padding-top: 235px;
-    padding-bottom: 280px;
+    padding-top: 177px;
+    padding-bottom: 274px;
   }
 
-  .hero__background {
+  .hero img {
     min-height: 727px;
   }
 
@@ -2229,7 +2248,8 @@ input:checked + .checkbox__control-mark::after {
   }
 
   .travel {
-    padding: 100px 0;
+    padding-top: 90px;
+    padding-bottom: 93px;
   }
 
   .travel__wrapper {
@@ -2244,17 +2264,26 @@ input:checked + .checkbox__control-mark::after {
   }
 
   .travel__title {
-    margin-bottom: 30px;
+    margin-bottom: 17px;
+    max-width: 212px;
     font-size: 26px;
     line-height: 36px;
   }
 
-  .travel__image {
-    min-width: 324px;
+  .travel__text {
+    max-width: 320px;
+  }
+
+  .travel__wrapper-image {
+    padding-top: 10px;
+    max-width: 324px;
+    -ms-flex-item-align: start;
+    align-self: flex-start;
   }
 
   .advantages {
-    padding: 100px 0;
+    padding-top: 90px;
+    padding-bottom: 100px;
   }
 
   .advantages__title {
@@ -2267,16 +2296,16 @@ input:checked + .checkbox__control-mark::after {
   }
 
   .advantages__item {
-    padding: 26px 16px 25px 20px;
+    padding: 26px 16px 20px 20px;
   }
 
   .advantages__icon {
-    margin-bottom: 24px;
+    margin-bottom: 20px;
     height: 26px;
   }
 
   .advantages__icon--ship {
-    width: 21;
+    width: 21px;
   }
 
   .advantages__icon--check {
@@ -2291,12 +2320,17 @@ input:checked + .checkbox__control-mark::after {
     line-height: 25px;
   }
 
+  .advantages__subtitle--zodiac {
+    margin-bottom: 20px;
+  }
+
   .advantages__text {
     min-width: 169px;
   }
 
   .catalog {
-    padding: 100px 0;
+    padding-top: 90px;
+    padding-bottom: 100px;
   }
 
   .catalog__title {
@@ -2313,8 +2347,14 @@ input:checked + .checkbox__control-mark::after {
     padding: 35px;
   }
 
+  .catalog-card__title {
+    bottom: -94%;
+    left: 0;
+  }
+
   .booking__wrapper {
     padding: 100px 0;
+    padding-top: 90px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -2323,11 +2363,12 @@ input:checked + .checkbox__control-mark::after {
 
   .booking__content-wrapper {
     margin: 0;
-    margin-bottom: 60px;
+    margin-bottom: 52px;
   }
 
   .booking__title {
-    margin-bottom: 25px;
+    top: 0;
+    margin-bottom: 4px;
     font-size: 34px;
     line-height: 51px;
   }
@@ -2341,17 +2382,48 @@ input:checked + .checkbox__control-mark::after {
     padding: 100px 0;
   }
 
-  .contacts__map-wrapper {
-    min-width: 324px;
+  .contacts iframe {
+    margin: 0;
+    width: 324px;
     height: 335px;
+  }
+
+  .contacts__text {
+    margin-bottom: 28px;
+    max-width: 324px;
   }
 
   .contacts__address-text br {
     display: block;
   }
 
+  .footer__wrapper {
+    padding: 39px 0;
+  }
+
   .footer__logo {
     margin-right: 25px;
+  }
+
+  .footer__link {
+    width: 16px;
+    height: 16px;
+  }
+
+  .footer__social-list {
+    gap: 13px;
+  }
+
+  .footer__social-icon--ok {
+    width: 9px;
+  }
+
+  .footer__social-icon--votix {
+    width: 16px;
+  }
+
+  .footer__social-icon--reddi {
+    width: 16px;
   }
 }
 
@@ -2375,7 +2447,7 @@ input:checked + .checkbox__control-mark::after {
     position: absolute;
     top: 0;
     right: 0;
-    width: 265px;
+    width: 285px;
     height: 100vh;
     padding: 20px 15px 0 15px;
   }
@@ -2384,13 +2456,17 @@ input:checked + .checkbox__control-mark::after {
     width: 100%;
   }
 
+  .header__wrapper {
+    padding-top: 20px;
+  }
+
   .header__logo--no-js {
     margin-bottom: 20px;
   }
 
   .header__button {
     width: 24px;
-    height: 12px;
+    height: 18px;
     padding: 5px;
     display: block;
     position: relative;
@@ -2409,23 +2485,19 @@ input:checked + .checkbox__control-mark::after {
   }
 
   .header__button::before {
-    top: 0;
+    top: 4px;
     left: 0;
   }
 
   .header__button::after {
-    top: 5px;
+    top: 10px;
     left: 0;
   }
 
-  .logo__icon {
+  .logo img {
     width: 42px;
     height: 22px;
     color: #f9fbfd;
-  }
-
-  .logo__icon--modal {
-    color: #011c40;
   }
 
   .main-nav__list {
@@ -2461,6 +2533,10 @@ input:checked + .checkbox__control-mark::after {
     margin-bottom: 0;
   }
 
+  .navigation__item--footer {
+    margin: 0;
+  }
+
   .navigation__link {
     padding: 10px 0 8px 10px;
   }
@@ -2470,17 +2546,23 @@ input:checked + .checkbox__control-mark::after {
   }
 
   .hero__wrapper {
-    padding: 143px 25px 185px 0;
-  }
-
-  .hero__background--no-js {
-    top: -211px;
+    padding: 99px 25px 178px 0;
   }
 
   .hero__title {
     font-size: 36px;
     line-height: 45px;
-    margin-bottom: 25px;
+    margin-bottom: 12px;
+  }
+
+  .hero__text {
+    max-width: 208px;
+    font-size: 16px;
+  }
+
+  .travel {
+    padding-top: 56px;
+    padding-bottom: 85px;
   }
 
   .travel__wrapper {
@@ -2491,7 +2573,7 @@ input:checked + .checkbox__control-mark::after {
   }
 
   .travel__content-wrapper {
-    margin-bottom: 50px;
+    margin-bottom: 42px;
     min-width: 290px;
     -ms-flex-item-align: center;
     -ms-grid-row-align: center;
@@ -2503,16 +2585,21 @@ input:checked + .checkbox__control-mark::after {
     line-height: 34px;
   }
 
-  .travel__image {
-    min-width: 290px;
+  .travel__wrapper-image {
+    width: 290px;
+    padding: 0;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
   }
 
   .advantages {
-    padding: 65px 0;
+    padding-top: 56px;
+    padding-bottom: 65px;
   }
 
   .advantages__title {
-    margin-bottom: 40px;
+    margin-bottom: 31px;
     font-size: 24px;
     line-height: 36px;
   }
@@ -2522,12 +2609,22 @@ input:checked + .checkbox__control-mark::after {
     grid-template-columns: 1fr;
   }
 
-  .advantages__item {
-    padding: 25px 15px 25px 20px;
+  .advantages__icon {
+    margin-bottom: 19px;
   }
 
-  .advantages__icon {
-    margin-bottom: 25px;
+  .advantages__icon--ship-left {
+    position: relative;
+    top: -1px;
+    left: -4px;
+  }
+
+  .advantages__subtitle {
+    max-width: 170px;
+  }
+
+  .advantages__subtitle--zodiac {
+    margin-bottom: 8px;
   }
 
   .advantages__text br {
@@ -2539,11 +2636,12 @@ input:checked + .checkbox__control-mark::after {
   }
 
   .catalog {
-    padding: 65px 0;
+    padding-top: 57px;
+    padding-bottom: 65px;
   }
 
   .catalog__title {
-    margin-bottom: 40px;
+    margin-bottom: 31px;
     font-size: 24px;
     line-height: 36px;
   }
@@ -2554,15 +2652,26 @@ input:checked + .checkbox__control-mark::after {
     grid-template-columns: 1fr;
   }
 
+  .catalog-card {
+    padding: 30px 24px 36px 24px;
+  }
+
+  .catalog-card__title {
+    bottom: -97%;
+    left: 0;
+  }
+
   .booking__wrapper {
     padding: 65px 0;
+    padding-top: 59px;
   }
 
   .booking__content-wrapper {
-    margin-bottom: 40px;
+    margin-bottom: 34px;
   }
 
   .booking__title {
+    margin-bottom: 13px;
     font-size: 24px;
     line-height: 31px;
     text-align: center;
@@ -2578,7 +2687,9 @@ input:checked + .checkbox__control-mark::after {
   }
 
   .form-wrapper {
-    padding: 40px 30px;
+    padding: 30px;
+    padding-top: 35px;
+    padding-bottom: 41px;
   }
 
   .form-wrapper__form-title br {
@@ -2591,22 +2702,27 @@ input:checked + .checkbox__control-mark::after {
     line-height: 25px;
   }
 
+  .checkbox {
+    margin-bottom: 24px;
+  }
+
   .contacts__wrapper {
-    padding: 65px 0;
+    padding-top: 58px;
+    padding-bottom: 64px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
     -ms-flex-direction: column-reverse;
     flex-direction: column-reverse;
   }
 
-  .contacts__map-wrapper {
-    min-width: 30%;
+  .contacts iframe {
+    width: 100%;
     height: 316px;
   }
 
   .contacts__content-wrapper {
     margin: 0;
-    margin-bottom: 43px;
+    margin-bottom: 35px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2624,15 +2740,16 @@ input:checked + .checkbox__control-mark::after {
     -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: flex-start;
-    padding: 40px 0;
+    padding-top: 40px;
+    padding-bottom: 32px;
   }
 
   .footer__logo {
-    margin-bottom: 30px;
+    margin-bottom: 19px;
   }
 
   .footer__list {
-    margin-bottom: 30px;
+    margin-bottom: 12px;
   }
 
   .footer__social-list {

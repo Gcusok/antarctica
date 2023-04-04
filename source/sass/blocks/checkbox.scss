@@ -9,6 +9,10 @@
     font-size: 10px;
     line-height: 13px;
 
+    @include vp-767 {
+        margin-bottom: 24px;
+    }
+
     .input-message {
         position: absolute;
         top: 10px;
