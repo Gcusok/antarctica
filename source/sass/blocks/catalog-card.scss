@@ -56,7 +56,7 @@
         margin-bottom: 11px;
 
         position: relative;
-        bottom: -96%;
+        bottom: -308px;
         left: 6px;
         z-index: 3;
 
@@ -65,12 +65,11 @@
         line-height: 27px;
 
         @include vp-1023 {
-            bottom: -94%;
             left: 0;
+            bottom: -297px;
         }
 
         @include vp-767 {
-            bottom: -97%;
             left: 0;
         }
     }

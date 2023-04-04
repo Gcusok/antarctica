@@ -1685,7 +1685,7 @@ button,
   margin: 0;
   margin-bottom: 11px;
   position: relative;
-  bottom: -96%;
+  bottom: -308px;
   left: 6px;
   z-index: 3;
   font-weight: 500;
@@ -2348,8 +2348,8 @@ input:checked + .checkbox__control-mark::after {
   }
 
   .catalog-card__title {
-    bottom: -94%;
     left: 0;
+    bottom: -297px;
   }
 
   .booking__wrapper {
@@ -2657,7 +2657,6 @@ input:checked + .checkbox__control-mark::after {
   }
 
   .catalog-card__title {
-    bottom: -97%;
     left: 0;
   }
 
