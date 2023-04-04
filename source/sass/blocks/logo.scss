@@ -17,9 +17,9 @@
     scale: 0.9;
   }
 
-  &--modal {
-    img {
-      color: $color-tangaroa;
+  &--no-js {
+    @include vp-767 {
+      margin-bottom: 20px;
     }
   }
 
@@ -34,6 +34,13 @@
       height: 22px;
 
       color: $color-alice-blue;
+    }
+  }
+
+  &__icon {
+    @include vp-767 {
+      width: 42px;
+      height: 22px;
     }
   }
 }

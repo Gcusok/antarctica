@@ -3,13 +3,11 @@
   padding-top: 10px;
   z-index: 2;
 
-  @include vp-1023 {
-    padding: 0;
-  }
+  &--mobil-only {
 
-  &__list {
     @include vp-767 {
-      display: none;
+      position: relative;
+      z-index: 4;
     }
   }
 
@@ -19,5 +17,9 @@
       justify-content: center;
       width: 100vw;
     }
+  }
+
+  @include vp-1023 {
+    padding: 0;
   }
 }

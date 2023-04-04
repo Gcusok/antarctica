@@ -13,6 +13,9 @@ import {
 import {
   initCheckJs
 } from './modules/check-js/check-js';
+import {
+  initBurgerMenu
+} from './modules/burger/burger-menu';
 
 // ---------------------------------
 
@@ -35,6 +38,7 @@ window.addEventListener('DOMContentLoaded', () => {
     form.init();
     initSlowScroll();
     initCheckJs();
+    initBurgerMenu();
   });
 });
 

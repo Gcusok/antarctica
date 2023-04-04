@@ -21,29 +21,33 @@
     <header class="header">
       <div class="container">
         <div class="header__wrapper">
-          <a class="header__logo logo" href="#">
+          <a class="header__logo logo logo--no-js" data-logo href="#">
             <img class="logo__icon" src="img/logo-desktop.svg" width="70" height="38" alt="Логотип Круизы в Антарктику">
             <span class="visually-hidden">Логотип Круизы в Антарктику</span>
           </a>
           <!-- Навигация -->
-          <nav class="main-nav main-nav--no-js" data-main-nav="navigation">
-            <ul class="main-nav__list main-nav__list--no-js navigation" data-main-nav="list">
-              <li class="navigation__item">
-                <a class="navigation__link" data-nav-button href="#">Преимущества</a>
+          <nav class="main-nav main-nav--mobil-only main-nav--no-js" data-main-nav="navigation">
+            <ul class="main-nav__list navigation navigation--no-js" data-main-nav="list">
+              <li class="navigation__item navigation__item--mobil-logo-only visually-hidden" data-mobil-logo>
+                <a class="navigation__link" href="#">
+                  <img class="logo__icon" src="img/logo-mobil-black.svg" width="70" height="38"
+                    alt="Логотип Круизы в Антарктику"></a>
               </li>
               <li class="navigation__item">
-                <a class="navigation__link" href="#">Направления</a>
+                <a class="navigation__link navigation__link--mobil-only" data-nav-button href="#">Преимущества</a>
               </li>
               <li class="navigation__item">
-                <a class="navigation__link" data-nav-button href="#">Ближайшие круизы</a>
+                <a class="navigation__link navigation__link--mobil-only" href="#">Направления</a>
               </li>
               <li class="navigation__item">
-                <a class="navigation__link" data-nav-button href="#">Контакты</a>
+                <a class="navigation__link navigation__link--mobil-only" data-nav-button href="#">Ближайшие круизы</a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link navigation__link--mobil-only" data-nav-button href="#">Контакты</a>
               </li>
             </ul>
           </nav>
-          <button class="header__button visually-hidden" type="button" data-open-modal="feedback"
-            aria-label="Открыть/закрыть меню"></button>
+          <button class="header__button visually-hidden" type="button" data-burger="button" aria-label="Открыть/закрыть меню"></button>
         </div>
       </div>
     </header>
@@ -64,9 +68,9 @@
                 srcset="img/background/mobil/hero-mobil.jpg 1x, img/background/mobil/hero-mobil@2x.jpg 2x">
               <source media="(max-width: 1023px)"
                 srcset="img/background/tablet/hero-tablet.jpg 1x, img/background/tablet/hero-tablet@2x.jpg 2x">
-              <img class="hero__background--no-js" data-hero="background" src="img/background/desktop/hero-desktop.png"
-                width="1366" height="650" srcset="img/background/desktop/hero-desktop@2.png 2x"
-                alt="Вид на снежные горы Антарктики">
+              <img class="hero__background hero__background--no-js" data-hero="background"
+                src="img/background/desktop/hero-desktop.png" width="1366" height="650"
+                srcset="img/background/desktop/hero-desktop@2.png 2x" alt="Вид на снежные горы Антарктики">
             </picture>
             <div class="hero__content">
               <h1 class="hero__title">Круизы в&nbsp;Антарктику</h1>
@@ -550,7 +554,7 @@
   </div>
 
   <!-- Модалки -->
-  <div class="modal modal--preload" data-modal="feedback">
+  <!-- <div class="modal modal--preload" data-modal="feedback">
     <div class="modal__wrapper">
       <div class="modal__overlay" data-close-modal></div>
       <div class="modal__content">
@@ -580,7 +584,7 @@
         </ul>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <div class="modal modal--preload modal--fit-content modal--no-scale" data-modal="success">
     <div class="modal__wrapper">

@@ -63,6 +63,33 @@
         top: 10px;
         left: 0;
       }
+
+      &.is-active {
+        right: -11px;
+        border: none;
+      }
+
+      &.is-active::before,
+      &.is-active::after {
+        width: 16px;
+
+        position: absolute;
+        z-index: 5;
+        content: "";
+
+        background-color: $color-tangaroa;
+      }
+
+      &.is-active::before {
+        top: 10px;
+        rotate: 45deg;
+      }
+
+      &.is-active::after {
+        rotate: -45deg;
+      }
     }
+
+
   }
 }

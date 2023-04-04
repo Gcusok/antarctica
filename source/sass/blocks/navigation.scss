@@ -20,6 +20,18 @@
     line-height: 17px;
   }
 
+  @include vp-767 {
+    display: none;
+  }
+
+  &--no-js {
+    @include vp-767 {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+    }
+  }
+
   &--footer {
     @include vp-1023 {
       font-size: 12px;
@@ -27,14 +39,30 @@
     }
 
     @include vp-767 {
+      display: flex;
       flex-direction: column;
     }
   }
 
-  &--modal {
-    flex-direction: column;
+  &--mobil-only {
+    @include vp-767 {
+      padding-top: 25px;
+      min-width: 89vw;
+      min-height: 568px;
 
-    color: $color-tangaroa;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      position: absolute;
+      top: -20px;
+      right: -40px;
+      z-index: 4;
+
+      background-color: $color-alice-blue;
+      color: $color-tangaroa;
+      box-shadow: -150px 0 0 0 $color-header-shadow;
+    }
   }
 
   &__item {
@@ -58,10 +86,29 @@
       }
     }
 
+    &--mobil-only {
+      @include vp-767 {
+        margin: 0;
+
+        position: relative;
+        top: -14px;
+        left: 6px;
+      }
+    }
+
     &--footer {
       @include vp-767 {
         margin: 0;
       }
+    }
+
+    &--mobil-logo-only {
+      @include vp-767 {
+        position: relative;
+        top: -14px;
+        left: 5px;
+      }
+
     }
   }
 
@@ -96,9 +143,13 @@
       }
     }
 
-    &--modal {
-      font-size: 18px;
-      line-height: 22px;
+    &--mobil-only {
+      @include vp-767 {
+        padding-left: 26px;
+
+        font-size: 18px;
+        line-height: 22px;
+      }
     }
   }
 }
