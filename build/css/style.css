@@ -740,6 +740,10 @@ button,
   background-color: #ffffff;
 }
 
+.modal__description {
+  margin: auto;
+}
+
 .modal__header {
   margin-bottom: 33px;
 }
