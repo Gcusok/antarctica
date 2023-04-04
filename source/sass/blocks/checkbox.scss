@@ -16,6 +16,10 @@
     .input-message {
         position: absolute;
         top: 10px;
+
+        @include vp-767 {
+            top: 28px;
+        }
     }
 
     &__control-mark {

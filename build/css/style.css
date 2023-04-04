@@ -2706,6 +2706,10 @@ input:checked + .checkbox__control-mark::after {
     margin-bottom: 24px;
   }
 
+  .checkbox .input-message {
+    top: 28px;
+  }
+
   .contacts__wrapper {
     padding-top: 58px;
     padding-bottom: 64px;
