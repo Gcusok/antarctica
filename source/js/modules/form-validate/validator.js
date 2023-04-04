@@ -1,6 +1,14 @@
-import {getLimitationsRegEx, getMatrixLimitationsRegEx, getMailRegEx} from './regular-expression';
-import {matrixReplace} from './matrix';
-import {Message} from './render-message';
+import {
+  getLimitationsRegEx,
+  getMatrixLimitationsRegEx,
+  getMailRegEx
+} from './regular-expression';
+import {
+  matrixReplace
+} from './matrix';
+import {
+  Message
+} from './render-message';
 
 export class Validator {
   constructor() {

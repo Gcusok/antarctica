@@ -1,100 +1,99 @@
 .travel {
-    padding: 120px 0 145px 0;
+  padding: 120px 0 145px 0;
 
-    background-color: $color-alice-blue;
+  background-color: $color-alice-blue;
 
-    position: relative;
-    z-index: 3;
+  position: relative;
+  z-index: 3;
 
-    font-size: 16px;
-    line-height: 24px;
+  font-size: 16px;
+  line-height: 24px;
+
+  @include vp-1023 {
+    padding-top: 90px;
+    padding-bottom: 93px;
+  }
+
+  @include vp-767 {
+    padding-top: 56px;
+    padding-bottom: 85px;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
     @include vp-1023 {
-        padding-top: 90px;
-        padding-bottom: 93px;
+      align-items: flex-start;
     }
 
     @include vp-767 {
-        padding-top: 56px;
-        padding-bottom: 85px;
+      flex-direction: column;
+    }
+  }
+
+  &__content-wrapper {
+    max-width: 512px;
+
+    @include vp-1023 {
+      padding: 0;
+      min-width: 324px;
     }
 
-    &__wrapper {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+    @include vp-767 {
+      margin-bottom: 42px;
+      min-width: 290px;
 
-        @include vp-1023 {
-            align-items: flex-start;
-        }
+      align-self: center;
+    }
+  }
 
-        @include vp-767 {
-            flex-direction: column;
-        }
+  &__title {
+    margin: 0;
+    margin-bottom: 22px;
+
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 42px;
+
+    @include vp-1023 {
+      margin-bottom: 17px;
+      max-width: 212px;
+
+      font-size: 26px;
+      line-height: 36px;
     }
 
-    &__content-wrapper {
-        max-width: 512px;
+    @include vp-767 {
+      font-size: 24px;
+      line-height: 34px;
+    }
+  }
 
-        @include vp-1023 {
-            padding: 0;
-            min-width: 324px;
-        }
+  &__text {
+    margin: 0;
 
-        @include vp-767 {
-            margin-bottom: 42px;
-            min-width: 290px;
+    @include vp-1023 {
+      max-width: 320px;
+    }
+  }
 
-            align-self: center;
-        }
+  &__wrapper-image {
+    align-self: center;
+
+    @include vp-1023 {
+      padding-top: 10px;
+      max-width: 324px;
+
+      align-self: flex-start;
     }
 
-    &__title {
-        margin: 0;
-        margin-bottom: 22px;
+    @include vp-767 {
+      width: 290px;
+      padding: 0;
 
-        font-weight: 600;
-        font-size: 28px;
-        line-height: 42px;
-
-        @include vp-1023 {
-            margin-bottom: 17px;
-            max-width: 212px;
-
-            font-size: 26px;
-            line-height: 36px;
-        }
-
-        @include vp-767 {
-            font-size: 24px;
-            line-height: 34px;
-        }
+      align-self: center;
     }
-
-    &__text {
-        margin: 0;
-
-        @include vp-1023 {
-            max-width: 320px;
-        }
-    }
-
-    &__wrapper-image {
-        align-self: center;
-
-        @include vp-1023 {
-            padding-top: 10px;
-            max-width: 324px;
-
-            align-self: flex-start;
-        }
-
-        @include vp-767 {
-            width: 290px;
-            padding: 0;
-
-            align-self: center;
-        }
-
-    }
+  }
 }

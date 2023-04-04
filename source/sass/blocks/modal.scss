@@ -67,7 +67,7 @@
     @include vp-767 {
       display: flex;
       flex-direction: column;
-      
+
       position: absolute;
       top: 0;
       right: 0;
@@ -78,9 +78,9 @@
     }
   }
 
-   &__header {
+  &__header {
     margin-bottom: 33px;
-   }
+  }
 
   &__close-btn {
     position: absolute;

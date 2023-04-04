@@ -1,80 +1,80 @@
 .hero {
+  position: relative;
+  background-color: $color-prussian-blue;
+
+  &__wrapper {
+    padding: 160px 0 278px 95px;
+
+    @include vp-1023 {
+      padding: 0;
+      padding-top: 177px;
+      padding-bottom: 274px;
+    }
+
+    @include vp-767 {
+      padding: 99px 25px 178px 0;
+    }
+  }
+
+  img {
+    width: 100%;
+    min-height: 730px;
+
+    position: absolute;
+    bottom: -9px;
+    left: 0;
+    z-index: 1;
+
+    @include vp-1023 {
+      min-height: 727px;
+    }
+  }
+
+  &__content {
     position: relative;
-    background-color: $color-prussian-blue;
+    z-index: 2;
 
-    &__wrapper {
-        padding: 160px 0 278px 95px;
+    font-size: 20px;
+    line-height: 24px;
+    color: $color-alice-blue;
+    text-shadow: 0 4px 4px $color-text-shadow;
+  }
 
-        @include vp-1023 {
-            padding: 0;
-            padding-top: 177px;
-            padding-bottom: 274px;
-        }
+  &__title {
+    margin: 0;
+    margin-bottom: 12px;
 
-        @include vp-767 {
-            padding: 99px 25px 178px 0;
-        }
+    font-weight: 700;
+    font-size: 54px;
+    line-height: 66px;
+
+    text-shadow: 0 4px 4px $color-text-shadow;
+
+    @include vp-1023 {
+      font-size: 50px;
+      line-height: 61px;
     }
 
-    img {
-        width: 100%;
-        min-height: 730px;
+    @include vp-767 {
+      font-size: 36px;
+      line-height: 45px;
 
-        position: absolute;
-        bottom: -9px;
-        left: 0;
-        z-index: 1;
+      margin-bottom: 12px;
+    }
+  }
 
-        @include vp-1023 {
-            min-height: 727px;
-        }
+  &__text {
+    margin: 0;
+
+    @include vp-1023 {
+      font-size: 18px;
+      line-height: 22px;
     }
 
-    &__content {
-        position: relative;
-        z-index: 2;
+    @include vp-767 {
+      max-width: 208px;
 
-        font-size: 20px;
-        line-height: 24px;
-        color: $color-alice-blue;
-        text-shadow: 0px 4px 4px $color-text-shadow;
+      font-size: 16px;
     }
-
-    &__title {
-        margin: 0;
-        margin-bottom: 12px;
-
-        font-weight: 700;
-        font-size: 54px;
-        line-height: 66px;
-
-        text-shadow: 0px 4px 4px $color-text-shadow;
-
-        @include vp-1023 {
-            font-size: 50px;
-            line-height: 61px;
-        }
-
-        @include vp-767 {
-            font-size: 36px;
-            line-height: 45px;
-
-            margin-bottom: 12px;
-        }
-    }
-
-    &__text {
-        margin: 0;
-
-        @include vp-1023 {
-            font-size: 18px;
-            line-height: 22px;
-        }
-
-        @include vp-767 {
-            max-width: 208px;
-
-            font-size: 16px;
-        }
-    }
+  }
 }
