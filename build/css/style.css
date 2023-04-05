@@ -2075,6 +2075,7 @@ input:checked + .checkbox__control-mark::after {
   -ms-flex-align: center;
   align-items: center;
   padding: 50px 0;
+  padding-bottom: 40px;
 }
 
 .footer__logo {
@@ -2133,6 +2134,11 @@ input:checked + .checkbox__control-mark::after {
 
 .footer__social-link:active {
   scale: 0.9;
+}
+
+.footer__social-icon--ok {
+  position: relative;
+  right: -7px;
 }
 
 /* @mixin hover-focus {
@@ -2312,6 +2318,10 @@ input:checked + .checkbox__control-mark::after {
     margin-bottom: 20px;
   }
 
+  .advantages__text--zodiac {
+    max-width: 150px;
+  }
+
   .advantages__text {
     min-width: 169px;
   }
@@ -2403,6 +2413,7 @@ input:checked + .checkbox__control-mark::after {
   }
 
   .footer__social-icon--ok {
+    right: 0;
     width: 9px;
   }
 
@@ -2737,6 +2748,7 @@ input:checked + .checkbox__control-mark::after {
   }
 
   .catalog-card__title {
+    bottom: -310px;
     left: 0;
   }
 

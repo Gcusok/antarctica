@@ -8,6 +8,7 @@
     align-items: center;
 
     padding: 50px 0;
+    padding-bottom: 40px;
 
     @include vp-1023 {
       padding: 39px 0;
@@ -105,7 +106,11 @@
 
   &__social-icon {
     &--ok {
+      position: relative;
+      right: -7px;
+
       @include vp-1023 {
+        right: 0;
         width: 9px;
       }
     }

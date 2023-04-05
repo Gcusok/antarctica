@@ -173,6 +173,12 @@
       max-width: 280px;
     }
 
+    &--zodiac {
+      @include vp-1023 {
+        max-width: 150px;
+      }
+    }
+
     @include vp-1023 {
       min-width: 169px;
     }
