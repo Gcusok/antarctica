@@ -1,5 +1,8 @@
 .catalog-card {
-  min-height: 386px;
+  width: 260px;
+  height: 386px;
+  max-height: 386px;
+  overflow: hidden;
 
   padding: 35px 25px;
   padding-top: 30px;
@@ -14,15 +17,18 @@
   transition: $trans-600;
 
   @include vp-1023 {
+    width: 309px;
     padding: 35px;
   }
 
   @include vp-767 {
+    width: 270px;
     padding: 30px 24px 36px 24px;
   }
 
   &:hover,
   &:focus-within {
+    overflow: auto;
 
     box-shadow: 0 4px 35px $color-shadow;
 
@@ -37,18 +43,31 @@
       left: 0;
       bottom: 0;
     }
+
+    .catalog-card__title+.catalog-card__title {
+      color: inherit;
+    }
   }
 
   img {
-    width: 100%;
-    height: 100%;
+    height: 386px;
+    max-height: 386px;
+    width: 260px;
 
     position: absolute;
     top: 0;
     left: 0;
     z-index: 2;
 
-    transition: $trans-600;
+    transition: 0.2s;
+
+    @include vp-1023 {
+      width: 309px;
+    }
+
+    @include vp-767 {
+      width: 270px;
+    }
   }
 
   &__title {
@@ -73,6 +92,10 @@
       bottom: -310px;
       left: 0;
     }
+  }
+
+  &__title+&__title {
+    color: transparent;
   }
 
   &__list {

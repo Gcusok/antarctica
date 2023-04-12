@@ -6,8 +6,7 @@
     z-index: 2;
 
     display: flex;
-    align-items: flex-start;
-    flex-wrap: wrap;
+    align-items: center;
     padding: 35px 0;
 
     @include vp-1023 {
@@ -17,9 +16,17 @@
     @include vp-767 {
       padding-top: 20px;
     }
+
+    &--no-js {
+      flex-wrap: wrap
+    }
   }
 
   &__logo {
+    align-self: flex-start;
+    margin-right: 20px;
+    min-width: 70px;
+
     &--no-js {
       @include vp-767 {
         margin-bottom: 20px;
@@ -31,6 +38,7 @@
     display: none;
 
     @include vp-767 {
+      margin-left: auto;
       width: 24px;
       height: 18px;
 

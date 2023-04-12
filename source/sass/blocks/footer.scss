@@ -86,7 +86,7 @@
   }
 
   &__social-link {
-    display: block;
+    display: inline-block;
 
     &:focus {
       outline: 2px solid $color-alice-blue;
@@ -107,7 +107,7 @@
   &__social-icon {
     &--ok {
       position: relative;
-      right: -7px;
+      right: -2px;
 
       @include vp-1023 {
         right: 0;

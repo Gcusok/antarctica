@@ -44,6 +44,7 @@
 
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
     gap: 30px;
 
     list-style: none;
@@ -52,11 +53,11 @@
     line-height: 20px;
     color: $color-alice-blue;
 
-    @include vp-1279 {
+    @media (max-width: 1347px) {
       grid-template-columns: repeat(3, 1fr);
     }
 
-    @include vp-1023 {
+    @media (max-width: 1062px) {
       grid-template-columns: repeat(2, 1fr);
     }
 

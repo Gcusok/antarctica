@@ -1,3 +1,7 @@
+import {
+  closeMenu
+} from '../burger/burger-menu';
+
 const navigationButtons = document.querySelectorAll('[data-nav-button]');
 const advantagesSection = document.querySelector('[data-section="advantages"]');
 const bookingSection = document.querySelector('[data-section="booking"]');
@@ -22,6 +26,7 @@ const initSlowScroll = () => {
           section = contactsSection;
           break;
       }
+      closeMenu();
       section.scrollIntoView({
         behavior: 'smooth',
         block: 'start',

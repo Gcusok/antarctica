@@ -36,8 +36,8 @@ window.addEventListener('DOMContentLoaded', () => {
     const form = new Form();
     window.form = form;
     form.init();
-    initSlowScroll();
     initCheckJs();
+    initSlowScroll();
     initBurgerMenu();
   });
 });
