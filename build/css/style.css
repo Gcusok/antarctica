@@ -1644,7 +1644,7 @@ button,
   width: 260px;
   height: 386px;
   max-height: 386px;
-  overflow: hidden;
+  overflow: unset;
   padding: 35px 25px;
   padding-top: 30px;
   display: -webkit-box;
@@ -2479,6 +2479,7 @@ input:checked + .checkbox__control-mark::after {
 
   .footer__wrapper {
     padding: 39px 0;
+    padding-top: 43px;
   }
 
   .footer__logo {
@@ -2662,7 +2663,7 @@ input:checked + .checkbox__control-mark::after {
 
   .navigation--mobil-only {
     padding-top: 25px;
-    min-width: 285px;
+    min-width: 289px;
     min-height: 568px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2703,8 +2704,9 @@ input:checked + .checkbox__control-mark::after {
   }
 
   .navigation__item--mobil-logo-only {
+    margin-bottom: 30px;
     position: relative;
-    top: -14px;
+    top: 5px;
     left: 5px;
   }
 
@@ -2753,7 +2755,7 @@ input:checked + .checkbox__control-mark::after {
   }
 
   .travel__content-wrapper {
-    margin-bottom: 11px;
+    margin-bottom: 5px;
     min-width: 290px;
     -ms-flex-item-align: center;
     -ms-grid-row-align: center;
@@ -2912,7 +2914,7 @@ input:checked + .checkbox__control-mark::after {
 
   .contacts__wrapper {
     padding-top: 58px;
-    padding-bottom: 64px;
+    padding-bottom: 56px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
     -ms-flex-direction: column-reverse;
@@ -2943,6 +2945,10 @@ input:checked + .checkbox__control-mark::after {
 
   .contacts__text {
     min-width: 290px;
+  }
+
+  .contacts__icon {
+    top: 2px;
   }
 
   .footer__wrapper {
