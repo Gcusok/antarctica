@@ -45,10 +45,14 @@
   }
 
   &--mobil-only {
+    visibility: hidden;
+
     @include vp-767 {
+      visibility: visible;
+
       padding-top: 25px;
-      min-width: 289px;
-      min-height: 568px;
+      width: 90vw;
+      height: 110vh;
 
       display: flex;
       flex-direction: column;
@@ -146,11 +150,20 @@
     }
 
     &--mobil-only {
+
       @include vp-767 {
         padding-left: 26px;
 
         font-size: 18px;
         line-height: 22px;
+      }
+    }
+
+    &--mobil-only-logo {
+      visibility: hidden;
+
+      @include vp-767 {
+        visibility: visible;
       }
     }
   }
